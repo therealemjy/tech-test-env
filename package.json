@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpileOnly src/index.ts",
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "lint": "tsc src/index.ts --noEmit && eslint src/index.ts --quiet",
     "pretty": "prettier --write src/index.ts",
     "build": "tsc src/index.ts"
@@ -15,8 +15,9 @@
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "eslint": "^6.3.0",
+    "nodemon": "^1.19.2",
     "prettier": "^1.18.2",
-    "ts-node-dev": "^1.0.0-pre.42",
+    "ts-node": "^8.3.0",
     "typescript": "^3.6.3"
   }
 }
